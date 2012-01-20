@@ -69,4 +69,4 @@ module Parser
 	end
 end
 
-puts Parser::HAJk.new.parse.get_school.to_json
+puts JSON.pretty_generate(Parser::HAJk.new.parse.get_school.to_hash)

@@ -38,7 +38,7 @@ module Model
 		attr_accessor :classes, :name
 
 		def initialize(name, classes=nil)
-			@name = name
+			@name = name.strip
 			@classes = classes
 		end
 
@@ -61,7 +61,7 @@ module Model
 		attr_reader :studios, :name, :homepage
 
 		def initialize(name, homepage, studios)
-			@name = name
+			@name = name.strip
 			@homepage = homepage
 			@studios = studios
 		end
