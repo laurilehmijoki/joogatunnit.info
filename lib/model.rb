@@ -1,3 +1,5 @@
+require 'json'
+
 module Model
 	class YogaClass
 
@@ -12,6 +14,21 @@ module Model
 			@endhour 		= endhour
 		end	
 
+
+		def to_hash
+			{
+				"name" => name,
+				"teacher" => teacher,
+				"dayofweek" => dayofweek,
+				"date" => date,
+				"starthour" => starthour,
+				"endhour" => endhour	
+			}
+		end
+
+		def to_json
+			to_hash.to_json
+		end
 	end
 end
 
@@ -25,6 +42,16 @@ module Model
 			@classes = classes
 		end
 
+		def to_hash
+			{
+				"name" => name,
+				"classes" => classes.map{|c| c.to_hash}
+			}
+		end
+
+		def to_json
+			to_hash.to_json
+		end
 	end
 end
 
@@ -39,5 +66,17 @@ module Model
 			@studios = studios
 		end
 
+		def to_hash
+			{
+				"name" => name,
+				"homepage" => homepage,
+				"studios" => studios.map{|s| s.to_hash}	
+			}
+		end
+
+		def to_json
+			to_hash.to_json
+		end	
+	
 	end
 end

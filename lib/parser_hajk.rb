@@ -4,7 +4,7 @@ require 'open-uri'
 
 # This project
 require 'model'
-require 'yaml'
+require 'json'
 
 module Parser
 	# Parser for Helsingin astanga joogakoulu (astanga.fi)
@@ -69,4 +69,4 @@ module Parser
 	end
 end
 
-puts Parser::HAJk.new.parse.get_school.studios[1].to_yaml
+puts Parser::HAJk.new.parse.get_school.to_json
