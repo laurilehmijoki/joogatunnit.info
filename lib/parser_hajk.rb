@@ -4,6 +4,7 @@ require 'open-uri'
 
 # This project
 require 'model'
+require 'yaml'
 
 module Parser
 	# Parser for Helsingin astanga joogakoulu (astanga.fi)
@@ -21,8 +22,7 @@ module Parser
 			return Model::School.new(name="Helsingin astanga joogakoulu", homepage="http://astanga.fi", studios=get_studios)
 		end
 
-		#private
-
+		# Returns an array of Model::Studios parsed from the URL
 		def get_studios
 			studios = Array.new
 			doc.css(".aikataulu2").each {|studio_frag|
@@ -52,8 +52,8 @@ module Parser
 						starttime = nil
 						endtime = nil
 						frag.inner_text.scan(/(\d{2}:\d{2})/) { |m|
-							starttime = m if starttime == nil
-							endtime = m
+							starttime = m[0] if starttime == nil
+							endtime = m[0]
 						}
 					
 						classes.push(Model::YogaClass.new(class_name, teacher, dowToDate.fetch(i), i, starttime, endtime)) unless class_name == nil or teacher == nil
@@ -64,8 +64,9 @@ module Parser
 				studio.classes = classes
 
 			}
-
-			studios
+			return studios
 		end
 	end
 end
+
+puts Parser::HAJk.new.parse.get_school.studios[1].to_yaml

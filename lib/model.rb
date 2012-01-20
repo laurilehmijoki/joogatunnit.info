@@ -1,5 +1,3 @@
-require 'json'
-
 module Model
 	class YogaClass
 
@@ -14,10 +12,6 @@ module Model
 			@endhour 		= endhour
 		end	
 
-		def to_s
-			puts "teacher: #{teacher}, class: #{name}, start: #{starthour}, end: #{endhour}, date: #{date}, dow: #{dayofweek}"
-		end
-	
 	end
 end
 
@@ -30,7 +24,7 @@ module Model
 			@name = name
 			@classes = classes
 		end
-			
+
 	end
 end
 
