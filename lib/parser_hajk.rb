@@ -23,45 +23,49 @@ module Parser
 
 		#private
 
-		# Returns Model::Studio parsed from the URL
 		def get_studios
 			studios = Array.new
-			studio_title_root = @doc.xpath("//table[@class='aikataulu2']/tr/td/a[@class='citylink']/..")
-			studio_title_root.each{ |frag| 
-				studio_name = frag.css("a").inner_text
-				studio_detail = frag.css(".graytext").inner_text
+			doc.css(".aikataulu2").each {|studio_frag|
+
+				studio_name = studio_frag.css(".citylink").inner_text
+				studio_detail = studio_frag.css(".graytext").inner_text
+				
 				studio = Model::Studio.new(name="#{studio_name} – #{studio_detail}")
 				studios.push(studio)
-			}
-			return studios
-		end
-
-		def get_classes(studio)
-			dowToDate = Hash.new # Keys: 0 = Monday,..., 6 = Sunday; values: dd.mm.
-			root = doc.css(".aikataulu2 tr")
-			
-			# Map day of week to date
-			root[1].css("b").each_with_index{|t, i| 
-				dowToDate.store(i, /.*?(\d{1,2}\.\d{1,2}\.).*/.match(t)[1])
-			}
-			
-			# Iterate each day's classes
-			dowToClasses = Hash.new # Keys: 0 = Monday,..., 6 = Sunday; values: dd.mm. 
-			root[2].css("table tr td").each_with_index{|frag, i|
-				bold = frag.css("b").children
-				class_name = bold.first.inner_text unless bold.first == nil
-				class_name << bold.children[1].inner_text unless bold.children[1] == nil or bold.children.length == 2 
-				teacher = bold.last.inner_text unless bold.last == nil
+					
+				dowToDate = Hash.new # Keys: 0 = Monday,..., 6 = Sunday; values: dd.mm.
 				
-				startendmatch = /.*?(\d{2}:\d{2}).*(\d{2}:\d{2}).*/.match(frag.inner_text)
-			
-				starttime = startendmatch[1] unless startendmatch == nil
-				endtime = startendmatch[2] unless startendmatch == nil
+				# Map day of week to date
+				studio_frag.css(".navimenu b").each_with_index{|t, i| 
+					dowToDate.store(i, /.*?(\d{1,2}\.\d{1,2}\.).*/.match(t)[1])
+				}
 				
-				puts "teacher: #{teacher}, class: #{class_name}, start: #{starttime}, end: #{endtime}"
+				classes = Array.new
+				# Iterate each day's classes
+				studio_frag.css("table").each_with_index{|day, i|
+					day.css("tr td").each{|frag|
+						bold = frag.css("b").children
+						class_name = bold.first.inner_text unless bold.first == nil
+						class_name << bold.children[1].inner_text unless bold.children[1] == nil or bold.children.length == 2 
+						teacher = bold.last.inner_text unless bold.last == nil
+						
+						starttime = nil
+						endtime = nil
+						frag.inner_text.scan(/(\d{2}:\d{2})/) { |m|
+							starttime = m if starttime == nil
+							endtime = m
+						}
+					
+						classes.push(Model::YogaClass.new(class_name, teacher, dowToDate.fetch(i), i, starttime, endtime)) unless class_name == nil or teacher == nil
+							
+					}
+				}
+
+				studio.classes = classes
+
 			}
 
-			return ""
+			studios
 		end
 	end
 end
