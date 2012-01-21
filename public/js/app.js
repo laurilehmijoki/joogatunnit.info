@@ -12,8 +12,28 @@ App.Studio = Em.Object.extend({
   
 });
 
-App.YogaClass = Em.Object.extend({
+App.YogaClass = Em.Object.extend({});
 
+App.DayOfWeek = Em.Object.extend({
+  asNumber: -1,
+  inFinnish: function() {
+    switch (this.asNumber) {
+      case 0: return "Maanantai";
+      case 1: return "Tiistai";
+      case 2: return "Keskiviikko";
+      case 3: return "Torstai";
+      case 4: return "Perjantai";
+      case 5: return "Lauantai";
+      case 6: return "Sunnuntai";
+    }
+  }.property() 
+});
+
+App.daysOfWeek = Em.Object.create({
+  content: $.map([0,1,2,3,4,5,6], function(dow){
+    return App.DayOfWeek.create({asNumber:dow});
+  }) // 0 = Monday
+  
 });
 
 App.schoolsController = Em.ArrayController.create({
@@ -30,6 +50,7 @@ App.schoolsController = Em.ArrayController.create({
     });
   },
 
+  // Returns an App.School
   createSchool: function(schoolJson) {
     studioModels = schoolJson.studios.map(function(studio) {
       classModels = studio.classes.map(function(yogaClass) {
@@ -38,18 +59,16 @@ App.schoolsController = Em.ArrayController.create({
 
       studio.classes = classModels;
 
-      return App.Studio.create(studio); // Create studio
+      return App.Studio.create(studio);
     });
 
     schoolJson.studios = studioModels;
-    return App.School.create(schoolJson); // Create school
+    return App.School.create(schoolJson);
   }
 });
 
 App.StudioView = Em.View.extend({
-  content: {},
   templateName: "studio-table-view",
-
 });
 
 // Load the data. This also populates the views and produces the DOM.
