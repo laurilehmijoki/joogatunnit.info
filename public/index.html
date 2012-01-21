@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jooga-aikataulut</title>
+    <!--<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/ember-0.9.3.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="schools">
+        <script type="text/x-handlebars">
+          <h2>Schools</h2>
+          <div>
+            {{#each App.schoolsController.content}}
+              <h3>{{name}}</h3>
+            {{/each}}
+          </div>
+        </script>
+      </div>
+    </div> 
+ </body>
+</html>
+
+

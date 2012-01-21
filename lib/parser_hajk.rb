@@ -1,9 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-
-# This project
-require 'model'
+require './lib/model'
 require 'json'
 
 module Parser
