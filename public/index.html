@@ -1,36 +1,77 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Jooga-aikataulut</title>
-    <!--<link rel="stylesheet" href="css/studio980.css" type="text/css" media="screen"
-    charset="utf-8">-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
-    <script type="text/javascript" src="js/lib/ember-0.9.3.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/x-handlebars" data-template-name="studio-table-view">
-      <h4>{{content.name}}</h4>
-      {{#each content.classesByDow}}
-        {{teacher}}
-      {{/each}}
-    </script>
-  </head>
-  <body>
-    <div id="container">
-      <div class="schools">
-        <script type="text/x-handlebars">
-          <h2>Schools</h2>
-          <div>
-            {{#each App.schoolsController.content}}
-              <h3>{{name}}</h3>
-              {{#each studios}}
-                {{view App.StudioView contentBinding="this"}}
-              {{/each}}
-            {{/each}}
-          </div>
-        </script>
-      </div>
-    </div> 
- </body>
-</html>
 
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Jooga-aikataulut</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<!--<script src="js/lib/tabs.js"></script>-->
+
+  <script type="text/javascript" src="js/lib/ember-0.9.3.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <style type="text/css">
+    .yoga-class-info .block {display:block;}
+  </style>
+ 
+  <script type="text/x-handlebars" data-template-name="studio-view">
+    <h5>{{studio.name}}</h5> 
+    {{#each studio.dayDatas}}
+    <div class="one-seventh column">
+      <h6>{{dayofweek.inFinnish}}</h6>
+      {{#each classes}}
+      <p class="yoga-class-info">
+        <span class="yoga-class-name block">{{name}}</span>
+        <span class="yoga-class-teacher block">{{teacher}}</span>
+        {{#if starthour}}
+        <span class="yoga-class-start">{{starthour}}</span> – <span
+        class="yoga-class-end">{{endhour}}</span>
+        {{/if}}
+      </p>
+      {{/each}}
+    </div>
+    {{/each}}
+  </script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom" style="margin-top: 40px">Jooga-aikataulut</h1>
+			<h5>beta</h5>
+			<hr />
+		</div>
+
+    <script type="text/x-handlebars">
+
+    {{#each App.schoolsController.content}}
+    <h4>{{name}}</h4>
+      {{#each studios}}
+        {{view App.StudioView studioBinding="this"}}
+        <hr/>
+      {{/each}}
+    {{/each}}
+    </script>
+	</div>
+
+</body>
+</html>
 

@@ -11,6 +11,22 @@ App.StudioDayData = Em.Object.extend({
 
 });
 
+App.DayOfWeek = Em.Object.extend({
+  asInteger: -1,
+
+  inFinnish: function() {
+    switch (this.asInteger) {
+      case 0: return "Maanantai";
+      case 1: return "Tiistai";
+      case 2: return "Keskiviikko";
+      case 3: return "Torstai";
+      case 4: return "Perjantai";
+      case 5: return "Lauantai";
+      case 6: return "Sunnuntai";
+    }
+  }.property()
+});
+
 App.YogaClass = Em.Object.extend({});
 
 App.schoolsController = Em.ArrayController.create({
@@ -38,7 +54,7 @@ App.schoolsController = Em.ArrayController.create({
 
       studio.dayDatas = [0,1,2,3,4,5,6].map(function(dayOfWeek) {
         return App.StudioDayData.create({
-          dayofweek: dayOfWeek,
+          dayofweek: App.DayOfWeek.create({asInteger:dayOfWeek}),
           classes: studio.classes.filterProperty("dayofweek", dayOfWeek)
         });
       });
