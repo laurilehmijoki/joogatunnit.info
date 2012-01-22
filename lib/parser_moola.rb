@@ -17,7 +17,8 @@ module Parser
 
 		# Returns Model::School parsed from the URL
 		def get_school
-			return Model::School.new(name="Moola", homepage="http://moola.fi", studios=get_studios)
+      logo_url = "http://moola.fi/Site/Yhteystiedot_files/Screen%20shot%202009-09-06%20at%2011.41.03%20AM.jpg"
+			return Model::School.new(name="Moola", homepage="http://moola.fi", studios=get_studios, logo_url)
 		end
 
     private

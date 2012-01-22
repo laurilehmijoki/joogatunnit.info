@@ -30,6 +30,7 @@
   <style type="text/css">
     .block {display:block;}
     .yoga-class-teacher {font-style:italic;}
+    img {max-width: 100%}
   </style>
  
   <script type="text/x-handlebars" data-template-name="studio-view">
@@ -50,7 +51,12 @@
     </div>
     {{/each}}
   </script>
-
+  
+  <script type="text/x-handlebars" data-template-name="school-logo-view">
+    <div class="school-logo">
+      <img {{bindAttr src="school.logo_url"}} alt="Logo"/>
+    </div>
+  </script>  
 </head>
 <body>
 
@@ -64,7 +70,7 @@
     <script type="text/x-handlebars">
 
     {{#each App.schoolsController.content}}
-    <h4>{{name}}</h4>
+    {{view App.SchoolLogoView schoolBinding="this"}}
       {{#each studios}}
         {{view App.StudioView studioBinding="this"}}
         <hr/>

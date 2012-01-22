@@ -58,17 +58,19 @@ end
 module Model
 	class School
 		
-		attr_reader :studios, :name, :homepage
+		attr_reader :studios, :name, :homepage, :logo_url
 
-		def initialize(name, homepage, studios)
+		def initialize(name, homepage, studios, logo_url)
 			@name = name.strip
 			@homepage = homepage
 			@studios = studios
+      @logo_url = logo_url
 		end
 
 		def to_hash
 			{
 				"name" => name,
+        "logo_url" => logo_url,
 				"homepage" => homepage,
 				"studios" => studios.map{|s| s.to_hash}	
 			}
