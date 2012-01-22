@@ -20,6 +20,8 @@ module Parser
 			return Model::School.new(name="Moola", homepage="http://moola.fi", studios=get_studios)
 		end
 
+    private
+    
 		# Returns an array of Model::Studios parsed from the URL
     def get_studios
       studios = Array.new # Moola has only one studio
@@ -55,12 +57,7 @@ module Parser
       return studios
     end
 
-    private
-
-    def get_classes(weekday)
-      
-    end
   end
 end
 
-puts JSON.pretty_generate(Parser::Moola.new.parse.get_school.to_hash)
+#puts JSON.pretty_generate(Parser::Moola.new.parse.get_school.to_hash)

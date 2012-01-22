@@ -4,9 +4,9 @@ require 'sinatra'
 set :static, true
 set :public_folder, 'public'
 
-get '/api/:school' do
+get '/api/:file' do
   content_type :json  
-  File.open("json/#{params[:school]}", 'rb').read
+  File.open("json/#{params[:file]}", 'rb').read
 end
 
 get '/' do

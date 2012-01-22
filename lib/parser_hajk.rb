@@ -20,6 +20,8 @@ module Parser
 			return Model::School.new(name="Helsingin astanga joogakoulu", homepage="http://astanga.fi", studios=get_studios)
 		end
 
+    private
+
 		# Returns an array of Model::Studios parsed from the URL
 		def get_studios
 			studios = Array.new
@@ -67,4 +69,4 @@ module Parser
 	end
 end
 
-puts JSON.pretty_generate(Parser::HAJk.new.parse.get_school.to_hash)
+#puts JSON.pretty_generate(Parser::HAJk.new.parse.get_school.to_hash)

@@ -35,10 +35,12 @@ App.schoolsController = Em.ArrayController.create({
   loadData: function() {
     var self = this;
     $.ajax({
-      url: '/api/hajk', // Only one school at the moment
+      url: '/api/all_schools', 
       dataType: 'json',
       success: function(data) {
-        self.pushObject(self.createSchool(data));
+        data.schools.forEach(function(school) {
+          self.pushObject(self.createSchool(school));
+        });
       }
     });
   },
