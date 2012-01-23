@@ -29,6 +29,7 @@ App.DayOfWeek = Em.Object.extend({
 
 App.YogaClass = Em.Object.extend({});
 
+ 
 App.schoolsController = Em.ArrayController.create({
   content: [],
 

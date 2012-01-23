@@ -1,0 +1,1776 @@
+{
+  "schools": [
+    {
+      "name": "Helsingin astanga joogakoulu",
+      "homepage": "http://astanga.fi",
+      "logo_url": "http://astanga.fi/img/koulunlogo.jpg",
+      "studios": [
+        {
+          "name": "annankatu 29 B – sisäpiha 2. krs  ",
+          "classes": [
+            {
+              "endhour": null,
+              "dayofweek": 0,
+              "name": "",
+              "teacher": "Kuupäivä",
+              "date": "23.1.",
+              "starthour": null
+            },
+            {
+              "endhour": null,
+              "dayofweek": 0,
+              "name": "",
+              "teacher": "Kuupäivä",
+              "date": "23.1.",
+              "starthour": null
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 0,
+              "name": "Alkeismysore",
+              "teacher": "Mari M",
+              "date": "23.1.",
+              "starthour": "10:15"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 0,
+              "name": "Alkeet",
+              "teacher": "Mari M",
+              "date": "23.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 0,
+              "name": "Alkeismysore",
+              "teacher": "Virpi",
+              "date": "23.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 0,
+              "name": "Mysore",
+              "teacher": "Virpi",
+              "date": "23.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "19:10",
+              "dayofweek": 0,
+              "name": "Alkeet",
+              "teacher": "Rauha",
+              "date": "23.1.",
+              "starthour": "18:10"
+            },
+            {
+              "endhour": "20:30",
+              "dayofweek": 0,
+              "name": "Alkeisjatko",
+              "teacher": "Rauha",
+              "date": "23.1.",
+              "starthour": "19:20"
+            },
+            {
+              "endhour": "08:30",
+              "dayofweek": 1,
+              "name": "Mysore",
+              "teacher": "Virpi",
+              "date": "24.1.",
+              "starthour": "05:45"
+            },
+            {
+              "endhour": "10:30",
+              "dayofweek": 1,
+              "name": "Omaharjoitus",
+              "teacher": "",
+              "date": "24.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 1,
+              "name": "Alkeismysore",
+              "teacher": "Anna",
+              "date": "24.1.",
+              "starthour": "10:15"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 1,
+              "name": "Alkeet 2",
+              "teacher": "Anna",
+              "date": "24.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 1,
+              "name": "Alkeismysore",
+              "teacher": "Marke",
+              "date": "24.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 1,
+              "name": "Mysore",
+              "teacher": "Marke",
+              "date": "24.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 1,
+              "name": "Jatko",
+              "teacher": "Tero",
+              "date": "24.1.",
+              "starthour": "18:10"
+            },
+            {
+              "endhour": "20:40",
+              "dayofweek": 1,
+              "name": "Alkeet",
+              "teacher": "Tero",
+              "date": "24.1.",
+              "starthour": "19:40"
+            },
+            {
+              "endhour": "08:30",
+              "dayofweek": 2,
+              "name": "Mysore",
+              "teacher": "Virpi",
+              "date": "25.1.",
+              "starthour": "05:45"
+            },
+            {
+              "endhour": "10:20",
+              "dayofweek": 2,
+              "name": "Omaharjoitus",
+              "teacher": "",
+              "date": "25.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 2,
+              "name": "Mysore",
+              "teacher": "Anna",
+              "date": "25.1.",
+              "starthour": "10:15"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 2,
+              "name": "Alkeet",
+              "teacher": "Anna",
+              "date": "25.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 2,
+              "name": "Alkeismysore",
+              "teacher": "Marke",
+              "date": "25.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 2,
+              "name": "Mysore",
+              "teacher": "Marke",
+              "date": "25.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "19:10",
+              "dayofweek": 2,
+              "name": "Alkeet",
+              "teacher": "Marke",
+              "date": "25.1.",
+              "starthour": "18:10"
+            },
+            {
+              "endhour": "20:20",
+              "dayofweek": 2,
+              "name": "Alkeet 2",
+              "teacher": "Nea H",
+              "date": "25.1.",
+              "starthour": "19:20"
+            },
+            {
+              "endhour": "08:30",
+              "dayofweek": 3,
+              "name": "Mysore",
+              "teacher": "Marke",
+              "date": "26.1.",
+              "starthour": "05:45"
+            },
+            {
+              "endhour": "10:30",
+              "dayofweek": 3,
+              "name": "Omaharjoitus",
+              "teacher": "ohjaaja",
+              "date": "26.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 3,
+              "name": "Alkeismysore",
+              "teacher": "Anna",
+              "date": "26.1.",
+              "starthour": "10:15"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 3,
+              "name": "Alkeet",
+              "teacher": "Anna",
+              "date": "26.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 3,
+              "name": "Alkeismysore",
+              "teacher": "Virpi",
+              "date": "26.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 3,
+              "name": "Mysore",
+              "teacher": "Virpi",
+              "date": "26.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "19:10",
+              "dayofweek": 3,
+              "name": "Alkeet 2",
+              "teacher": "Maija",
+              "date": "26.1.",
+              "starthour": "18:10"
+            },
+            {
+              "endhour": "20:20",
+              "dayofweek": 3,
+              "name": "Alkeet",
+              "teacher": "Maija",
+              "date": "26.1.",
+              "starthour": "19:20"
+            },
+            {
+              "endhour": "08:30",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Marke",
+              "date": "27.1.",
+              "starthour": "05:45"
+            },
+            {
+              "endhour": "10:20",
+              "dayofweek": 4,
+              "name": "Omaharjoitus",
+              "teacher": "ohjaaja",
+              "date": "27.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "27.1.",
+              "starthour": "10:15"
+            },
+            {
+              "endhour": "13:10",
+              "dayofweek": 4,
+              "name": "Alkeisjatko",
+              "teacher": "Maarit",
+              "date": "27.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "15:45",
+              "dayofweek": 4,
+              "name": "Alkeet",
+              "teacher": "Nea H",
+              "date": "27.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "18:15",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Virpi",
+              "date": "27.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "10:15",
+              "dayofweek": 5,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "28.1.",
+              "starthour": "08:15"
+            },
+            {
+              "endhour": "11:50",
+              "dayofweek": 5,
+              "name": "Jatko",
+              "teacher": "Maarit",
+              "date": "28.1.",
+              "starthour": "10:30"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 5,
+              "name": "Alkeet",
+              "teacher": "Maarit",
+              "date": "28.1.",
+              "starthour": "12:00"
+            },
+            {
+              "endhour": "09:30",
+              "dayofweek": 6,
+              "name": "Mysore",
+              "teacher": "Marke",
+              "date": "29.1.",
+              "starthour": "07:15"
+            },
+            {
+              "endhour": "15:00",
+              "dayofweek": 6,
+              "name": "Alkeet 2",
+              "teacher": "Maija",
+              "date": "29.1.",
+              "starthour": "14:00"
+            },
+            {
+              "endhour": "16:10",
+              "dayofweek": 6,
+              "name": "Alkeet",
+              "teacher": "Maija",
+              "date": "29.1.",
+              "starthour": "15:10"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 6,
+              "name": "Mysore",
+              "teacher": "Elisa",
+              "date": "29.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:20",
+              "dayofweek": 6,
+              "name": "Alkeisjatko",
+              "teacher": "Elisa",
+              "date": "29.1.",
+              "starthour": "18:10"
+            }
+          ]
+        },
+        {
+          "name": "annankatu 29 B – sisäpiha alakerta  ",
+          "classes": [
+            {
+              "endhour": "08:15",
+              "dayofweek": 0,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "23.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "16:55",
+              "dayofweek": 0,
+              "name": "Alkeiskurssi",
+              "teacher": "Taina",
+              "date": "23.1.",
+              "starthour": "15:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 0,
+              "name": "Alkeet",
+              "teacher": "Taina",
+              "date": "23.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 0,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "23.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "20:40",
+              "dayofweek": 0,
+              "name": "Alkeet 2",
+              "teacher": "Anna",
+              "date": "23.1.",
+              "starthour": "19:40"
+            },
+            {
+              "endhour": "08:15",
+              "dayofweek": 1,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "24.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "09:40",
+              "dayofweek": 1,
+              "name": "Alkeet kertauskurssi",
+              "teacher": "Taina",
+              "date": "24.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "17:00",
+              "dayofweek": 1,
+              "name": "Alkeet 2",
+              "teacher": "Juha",
+              "date": "24.1.",
+              "starthour": "16:00"
+            },
+            {
+              "endhour": "18:45",
+              "dayofweek": 1,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "24.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "19:50",
+              "dayofweek": 1,
+              "name": "Joogasutrat",
+              "teacher": "kertamaksu 7e",
+              "date": "24.1.",
+              "starthour": "18:50"
+            },
+            {
+              "endhour": "08:15",
+              "dayofweek": 2,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "25.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "12:00",
+              "dayofweek": 2,
+              "name": "Yritystunti",
+              "teacher": "Elisa",
+              "date": "25.1.",
+              "starthour": "11:00"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 2,
+              "name": "Salivaraus",
+              "teacher": "Maarit",
+              "date": "25.1.",
+              "starthour": "14:00"
+            },
+            {
+              "endhour": "17:00",
+              "dayofweek": 2,
+              "name": "Alkeet",
+              "teacher": "Juha",
+              "date": "25.1.",
+              "starthour": "16:00"
+            },
+            {
+              "endhour": "18:45",
+              "dayofweek": 2,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "25.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 2,
+              "name": "Alkeisjatko",
+              "teacher": "Juha",
+              "date": "25.1.",
+              "starthour": "18:50"
+            },
+            {
+              "endhour": "08:15",
+              "dayofweek": 3,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "26.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "17:00",
+              "dayofweek": 3,
+              "name": "Alkeet",
+              "teacher": "Taina",
+              "date": "26.1.",
+              "starthour": "16:00"
+            },
+            {
+              "endhour": "18:45",
+              "dayofweek": 3,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "26.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "20:10",
+              "dayofweek": 3,
+              "name": "Jatko",
+              "teacher": "Taina",
+              "date": "26.1.",
+              "starthour": "18:50"
+            },
+            {
+              "endhour": "08:15",
+              "dayofweek": 4,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "27.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "17:00",
+              "dayofweek": 4,
+              "name": "Alkeet 2",
+              "teacher": "Taina",
+              "date": "27.1.",
+              "starthour": "16:00"
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 4,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "27.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 4,
+              "name": "Alkeet",
+              "teacher": "Taina",
+              "date": "27.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "10:30",
+              "dayofweek": 6,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Juha",
+              "date": "29.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "16:00",
+              "dayofweek": 6,
+              "name": "Kid's yoga",
+              "teacher": "Jenna",
+              "date": "29.1.",
+              "starthour": "15:15"
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 6,
+              "name": "Alkeismysore +mysore",
+              "teacher": "Taina",
+              "date": "29.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 6,
+              "name": "Alkeet",
+              "teacher": "Taina",
+              "date": "29.1.",
+              "starthour": "18:30"
+            }
+          ]
+        },
+        {
+          "name": "eerikinkatu 43 D – sisäpiha 3. krs ",
+          "classes": [
+            {
+              "endhour": null,
+              "dayofweek": 0,
+              "name": "",
+              "teacher": "Kuupäivä",
+              "date": "23.1.",
+              "starthour": null
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 0,
+              "name": "Alkeet 2",
+              "teacher": "Raisa",
+              "date": "23.1.",
+              "starthour": "17:30"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 1,
+              "name": "Mysore",
+              "teacher": "Ilpo",
+              "date": "24.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "17:50",
+              "dayofweek": 1,
+              "name": "Alkeismysore",
+              "teacher": "Rauha",
+              "date": "24.1.",
+              "starthour": "16:30"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 1,
+              "name": "Alkeet",
+              "teacher": "Rauha",
+              "date": "24.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "20:20",
+              "dayofweek": 1,
+              "name": "Alkeiskurssi",
+              "teacher": "Rauha",
+              "date": "24.1.",
+              "starthour": "19:10"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 2,
+              "name": "Mysore",
+              "teacher": "Ilpo",
+              "date": "25.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 2,
+              "name": "Alkeet 2",
+              "teacher": "Rauha",
+              "date": "25.1.",
+              "starthour": "17:30"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 3,
+              "name": "Mysore",
+              "teacher": "Ilpo",
+              "date": "26.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "17:50",
+              "dayofweek": 3,
+              "name": "Alkeismysore",
+              "teacher": "Raisa",
+              "date": "26.1.",
+              "starthour": "16:30"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 3,
+              "name": "Alkeet",
+              "teacher": "Raisa",
+              "date": "26.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "20:20",
+              "dayofweek": 3,
+              "name": "Alkeiskurssi",
+              "teacher": "Raisa",
+              "date": "26.1.",
+              "starthour": "19:10"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Ilpo",
+              "date": "27.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "11:20",
+              "dayofweek": 5,
+              "name": "Alkeismysore",
+              "teacher": "Raisa",
+              "date": "28.1.",
+              "starthour": "10:00"
+            },
+            {
+              "endhour": "16:30",
+              "dayofweek": 5,
+              "name": "Salivaraus",
+              "teacher": "Aila",
+              "date": "28.1.",
+              "starthour": "13:30"
+            },
+            {
+              "endhour": "10:40",
+              "dayofweek": 6,
+              "name": "Ohjattu 1",
+              "teacher": "Ilpo",
+              "date": "29.1.",
+              "starthour": "09:00"
+            },
+            {
+              "endhour": "12:10",
+              "dayofweek": 6,
+              "name": "Alkeismysore",
+              "teacher": "Ilpo",
+              "date": "29.1.",
+              "starthour": "10:50"
+            },
+            {
+              "endhour": "16:30",
+              "dayofweek": 6,
+              "name": "Hathajooga",
+              "teacher": "Jani J",
+              "date": "29.1.",
+              "starthour": "16:30"
+            }
+          ]
+        },
+        {
+          "name": "kolmas linja 21 C – sisäpiha  ",
+          "classes": [
+            {
+              "endhour": "08:00",
+              "dayofweek": 0,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "23.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "18:20",
+              "dayofweek": 0,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "23.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 0,
+              "name": "Alkeet",
+              "teacher": "Monna",
+              "date": "23.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "20:50",
+              "dayofweek": 0,
+              "name": "Kirtan",
+              "teacher": "Sami",
+              "date": "23.1.",
+              "starthour": "19:35"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 1,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "24.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "18:20",
+              "dayofweek": 1,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "24.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 1,
+              "name": "Alkeet",
+              "teacher": "Maarit",
+              "date": "24.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "20:50",
+              "dayofweek": 1,
+              "name": "Alkeismysore",
+              "teacher": "Maarit",
+              "date": "24.1.",
+              "starthour": "19:35"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 2,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "25.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "17:50",
+              "dayofweek": 2,
+              "name": "Alkeismysore",
+              "teacher": "Tero",
+              "date": "25.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 2,
+              "name": "Alkeet",
+              "teacher": "Tero",
+              "date": "25.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 3,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "26.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "18:20",
+              "dayofweek": 3,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "26.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 3,
+              "name": "Alkeismysore",
+              "teacher": "Monna",
+              "date": "26.1.",
+              "starthour": "17:50"
+            },
+            {
+              "endhour": "20:10",
+              "dayofweek": 3,
+              "name": "Alkeet",
+              "teacher": "Rauha",
+              "date": "26.1.",
+              "starthour": "19:10"
+            },
+            {
+              "endhour": "08:00",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "27.1.",
+              "starthour": "06:00"
+            },
+            {
+              "endhour": "18:20",
+              "dayofweek": 4,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "27.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 4,
+              "name": "Alkeet 2",
+              "teacher": "Monna",
+              "date": "27.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "13:00",
+              "dayofweek": 5,
+              "name": "Alkeiskurssi",
+              "teacher": "Monna",
+              "date": "28.1.",
+              "starthour": "10:00"
+            },
+            {
+              "endhour": "13:50",
+              "dayofweek": 5,
+              "name": "Lasten jooga 6-8v",
+              "teacher": "Jenna",
+              "date": "28.1.",
+              "starthour": "13:10"
+            },
+            {
+              "endhour": "14:35",
+              "dayofweek": 5,
+              "name": "Satujooga 3-5v",
+              "teacher": "Jenna",
+              "date": "28.1.",
+              "starthour": "14:00"
+            },
+            {
+              "endhour": "15:55",
+              "dayofweek": 5,
+              "name": "Alkeismysore",
+              "teacher": "Tero",
+              "date": "28.1.",
+              "starthour": "14:45"
+            },
+            {
+              "endhour": "17:10",
+              "dayofweek": 5,
+              "name": "Alkeet",
+              "teacher": "Tero",
+              "date": "28.1.",
+              "starthour": "16:10"
+            },
+            {
+              "endhour": "09:30",
+              "dayofweek": 6,
+              "name": "Mysore",
+              "teacher": "Maarit",
+              "date": "29.1.",
+              "starthour": "07:45"
+            },
+            {
+              "endhour": "16:15",
+              "dayofweek": 6,
+              "name": "Alkeiskurssi",
+              "teacher": "Monna",
+              "date": "29.1.",
+              "starthour": "14:15"
+            },
+            {
+              "endhour": "18:15",
+              "dayofweek": 6,
+              "name": "Mysore",
+              "teacher": "Monna",
+              "date": "29.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 6,
+              "name": "Alkeismysore",
+              "teacher": "Monna",
+              "date": "29.1.",
+              "starthour": "17:50"
+            },
+            {
+              "endhour": "20:10",
+              "dayofweek": 6,
+              "name": "Alkeet 2",
+              "teacher": "Rauha",
+              "date": "29.1.",
+              "starthour": "19:10"
+            }
+          ]
+        },
+        {
+          "name": "Helsingin lähialueiden joogaryhmät – Espoo, Itä-Helsinki, Kauniainen, Kerava, Vantaa  ",
+          "classes": [
+            {
+              "endhour": "17:00",
+              "dayofweek": 0,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "23.1.",
+              "starthour": "15:30"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 0,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "23.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "17:15",
+              "dayofweek": 1,
+              "name": "Yritystunti",
+              "teacher": "Maija",
+              "date": "24.1.",
+              "starthour": "16:15"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 1,
+              "name": "Leppävaara",
+              "teacher": "Nea H",
+              "date": "24.1.",
+              "starthour": "18:45"
+            },
+            {
+              "endhour": "21:00",
+              "dayofweek": 1,
+              "name": "Leppävaara",
+              "teacher": "Nea H",
+              "date": "24.1.",
+              "starthour": "20:00"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 2,
+              "name": "Kerava",
+              "teacher": "Maija",
+              "date": "25.1.",
+              "starthour": "17:30"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 2,
+              "name": "Kerava",
+              "teacher": "Maija",
+              "date": "25.1.",
+              "starthour": "19:00"
+            },
+            {
+              "endhour": "21:00",
+              "dayofweek": 2,
+              "name": "Kerava",
+              "teacher": "Maija",
+              "date": "25.1.",
+              "starthour": "20:00"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 3,
+              "name": "Kauklahti",
+              "teacher": "Mari H",
+              "date": "26.1.",
+              "starthour": "17:30"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 3,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "26.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 3,
+              "name": "Tikkurila",
+              "teacher": "Mari M",
+              "date": "26.1.",
+              "starthour": "18:45"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 3,
+              "name": "Kerava",
+              "teacher": "Mari H",
+              "date": "26.1.",
+              "starthour": "19:00"
+            },
+            {
+              "endhour": "20:30",
+              "dayofweek": 3,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "26.1.",
+              "starthour": "19:30"
+            },
+            {
+              "endhour": "17:45",
+              "dayofweek": 4,
+              "name": "Leppävaara",
+              "teacher": "Tero",
+              "date": "27.1.",
+              "starthour": "16:45"
+            },
+            {
+              "endhour": "10:00",
+              "dayofweek": 5,
+              "name": "Mysore",
+              "teacher": "Mari M",
+              "date": "28.1.",
+              "starthour": "08:30"
+            },
+            {
+              "endhour": "11:00",
+              "dayofweek": 5,
+              "name": "Kerava",
+              "teacher": "Mari H",
+              "date": "28.1.",
+              "starthour": "10:00"
+            },
+            {
+              "endhour": "12:00",
+              "dayofweek": 5,
+              "name": "Kerava",
+              "teacher": "Mari M",
+              "date": "28.1.",
+              "starthour": "11:00"
+            },
+            {
+              "endhour": "16:45",
+              "dayofweek": 6,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "29.1.",
+              "starthour": "15:15"
+            },
+            {
+              "endhour": "17:45",
+              "dayofweek": 6,
+              "name": "Järvenpää",
+              "teacher": "Nea H",
+              "date": "29.1.",
+              "starthour": "16:45"
+            },
+            {
+              "endhour": "18:00",
+              "dayofweek": 6,
+              "name": "Tikkurila",
+              "teacher": "Maija",
+              "date": "29.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 6,
+              "name": "Leppävaara",
+              "teacher": "Anna",
+              "date": "29.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "18:30",
+              "dayofweek": 6,
+              "name": "Kauklahti",
+              "teacher": "Maarit",
+              "date": "29.1.",
+              "starthour": "17:00"
+            },
+            {
+              "endhour": "19:00",
+              "dayofweek": 6,
+              "name": "DCA-Mankkaa",
+              "teacher": "Tero",
+              "date": "29.1.",
+              "starthour": "17:30"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 6,
+              "name": "Tikkurila",
+              "teacher": "Maija",
+              "date": "29.1.",
+              "starthour": "18:00"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 6,
+              "name": "Kauklahti",
+              "teacher": "Maarit",
+              "date": "29.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "19:30",
+              "dayofweek": 6,
+              "name": "Leppävaara",
+              "teacher": "Anna",
+              "date": "29.1.",
+              "starthour": "18:30"
+            },
+            {
+              "endhour": "20:00",
+              "dayofweek": 6,
+              "name": "DCA-Mankkaa",
+              "teacher": "Tero",
+              "date": "29.1.",
+              "starthour": "19:00"
+            },
+            {
+              "endhour": "21:00",
+              "dayofweek": 6,
+              "name": "DCA-Mankkaa",
+              "teacher": "Tero",
+              "date": "29.1.",
+              "starthour": "20:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Moola",
+      "homepage": "http://moola.fi",
+      "logo_url": "http://moola.fi/Site/Yhteystiedot_files/Screen%20shot%202009-09-06%20at%2011.41.03%20AM.jpg",
+      "studios": [
+        {
+          "name": "Tehtaankatu 4b 10, Helsinki",
+          "classes": [
+            {
+              "endhour": "08.00",
+              "dayofweek": 0,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "06.30"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 0,
+              "name": "Hatha",
+              "teacher": "Jasmin",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "13.00",
+              "dayofweek": 0,
+              "name": "Yin jooga",
+              "teacher": "Sanna",
+              "date": null,
+              "starthour": "12.00"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 0,
+              "name": "Lasten Tiikerijooga",
+              "teacher": "Jykä",
+              "date": null,
+              "starthour": "17.00"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 0,
+              "name": "Kundaliinijooga",
+              "teacher": "Inderjit",
+              "date": null,
+              "starthour": "17.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 0,
+              "name": "Astanga Mysore",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "17.30"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 0,
+              "name": "Astanga alkeet",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 0,
+              "name": "Kahvakuula",
+              "teacher": "Jykä",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 0,
+              "name": "Vini jooga",
+              "teacher": "Marttaleena",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 0,
+              "name": "Pilates",
+              "teacher": "Henna",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "08.00",
+              "dayofweek": 1,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "06.30"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 1,
+              "name": "Pilates",
+              "teacher": "Henna",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 1,
+              "name": "Lempeä jooga",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "13.00",
+              "dayofweek": 1,
+              "name": "Astanga",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "12.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 1,
+              "name": "Astanga Mysore",
+              "teacher": "Liisamari",
+              "date": null,
+              "starthour": "17.30"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 1,
+              "name": "Astanga alkeet",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 1,
+              "name": "Pilates",
+              "teacher": "Tea",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "20.15",
+              "dayofweek": 1,
+              "name": "Astanga alkeisjatko",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 1,
+              "name": "Meditaatio",
+              "teacher": "Antti",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 1,
+              "name": "Yin jooga",
+              "teacher": "Tea",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "21.00",
+              "dayofweek": 1,
+              "name": "Vini jooga",
+              "teacher": "Antti",
+              "date": null,
+              "starthour": "20.00"
+            },
+            {
+              "endhour": "08.00",
+              "dayofweek": 2,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "06.30"
+            },
+            {
+              "endhour": "10.00",
+              "dayofweek": 2,
+              "name": "Astanga alkeis Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "09.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 2,
+              "name": "Yin",
+              "teacher": "Jasmin, alkaa 1.2.",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 2,
+              "name": "Hatha",
+              "teacher": "Jasmin, alkaa 1.2.",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 2,
+              "name": "Astanga",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "17.30",
+              "dayofweek": 2,
+              "name": "Astanga alkeis Mysore",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "16.30"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 2,
+              "name": "Astanga Mysore",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "17.30"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 2,
+              "name": "  Yin jooga",
+              "teacher": "Henna, alkaa 8.2.",
+              "date": null,
+              "starthour": "17.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 2,
+              "name": "Pilates",
+              "teacher": "Henna",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 2,
+              "name": "Astanga alkeet",
+              "teacher": "Liisamari",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "20.15",
+              "dayofweek": 2,
+              "name": "Astanga alkeisjatko",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 2,
+              "name": "  Vini jooga",
+              "teacher": "Marttaleena",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "08.00",
+              "dayofweek": 3,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "06.30"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 3,
+              "name": "Yin jooga",
+              "teacher": "Henna",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 3,
+              "name": "Lempeä jooga",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "13.00",
+              "dayofweek": 3,
+              "name": "Astanga",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "12.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 3,
+              "name": "Kahvakuula",
+              "teacher": "Jykä",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 3,
+              "name": "Astanga Mysore",
+              "teacher": "Liisamari",
+              "date": null,
+              "starthour": "17.30"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 3,
+              "name": "Astanga alkeet",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 3,
+              "name": "Meditaatio",
+              "teacher": "Mouna",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.15",
+              "dayofweek": 3,
+              "name": "Astanga alkeisjatko",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 3,
+              "name": "Yin jooga",
+              "teacher": "Sanna",
+              "date": null,
+              "starthour": "19.00"
+            },
+            {
+              "endhour": "08.00",
+              "dayofweek": 4,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "06.30"
+            },
+            {
+              "endhour": "10.00",
+              "dayofweek": 4,
+              "name": "Astanga alkeis Mysore",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "09.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 4,
+              "name": "Lempeä jooga",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "17.30",
+              "dayofweek": 4,
+              "name": "Astanga alkeis Mysore",
+              "teacher": "Henna",
+              "date": null,
+              "starthour": "16.30"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 4,
+              "name": "Hatha",
+              "teacher": "Jasmin",
+              "date": null,
+              "starthour": "17.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 4,
+              "name": "Astanga Mysore",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "17.30"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 4,
+              "name": "Vini jooga",
+              "teacher": "Marttaleena",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 4,
+              "name": "Yin jooga",
+              "teacher": "Jasmin",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 5,
+              "name": "Astanga alkeet",
+              "teacher": "Minna",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 5,
+              "name": "Lasten Tiikerijooga",
+              "teacher": "Jenni",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 5,
+              "name": "Hatha",
+              "teacher": "Jasmin",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 5,
+              "name": "Yin",
+              "teacher": "Jasmin",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "12.15",
+              "dayofweek": 5,
+              "name": "Astanga alkeisjatko",
+              "teacher": "Ansku",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "12.00",
+              "dayofweek": 5,
+              "name": "Meditaatio",
+              "teacher": "Jenni",
+              "date": null,
+              "starthour": "11.00"
+            },
+            {
+              "endhour": "13.00",
+              "dayofweek": 5,
+              "name": "Mysore",
+              "teacher": "Jenni, alkaa 11.2.",
+              "date": null,
+              "starthour": "12.00"
+            },
+            {
+              "endhour": "10.00",
+              "dayofweek": 6,
+              "name": "Pranayama",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "9.00"
+            },
+            {
+              "endhour": "11.30",
+              "dayofweek": 6,
+              "name": "Astanga Mysore",
+              "teacher": "Antonio",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 6,
+              "name": "Astanga alkeet",
+              "teacher": "Miisa",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "11.00",
+              "dayofweek": 6,
+              "name": "Kahvakuula",
+              "teacher": "Jykä",
+              "date": null,
+              "starthour": "10.00"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 6,
+              "name": "Astanga Mysore",
+              "teacher": "Nina",
+              "date": null,
+              "starthour": "16.30"
+            },
+            {
+              "endhour": "18.00",
+              "dayofweek": 6,
+              "name": "Vini jooga",
+              "teacher": "Marttaleena",
+              "date": null,
+              "starthour": "17.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 6,
+              "name": "Pilates",
+              "teacher": "Marttaleena",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 6,
+              "name": "Yin jooga",
+              "teacher": "Nina",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "19.00",
+              "dayofweek": 6,
+              "name": "Rentouttava Iltajooga",
+              "teacher": "Carita",
+              "date": null,
+              "starthour": "18.00"
+            },
+            {
+              "endhour": "20.00",
+              "dayofweek": 6,
+              "name": "Meditaatio",
+              "teacher": "Carita",
+              "date": null,
+              "starthour": "19.00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
