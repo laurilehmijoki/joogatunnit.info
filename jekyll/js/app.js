@@ -7,7 +7,7 @@ App.Studio = Em.Object.extend({
 
 });
 
-App.StudioDayData = Em.Object.extend({
+App.DayData = Em.Object.extend({
 
 });
 
@@ -56,7 +56,7 @@ App.schoolsController = Em.ArrayController.create({
       studio.classes = classModels;
 
       studio.dayDatas = [0,1,2,3,4,5,6].map(function(dayOfWeek) {
-        return App.StudioDayData.create({
+        return App.DayData.create({
           dayofweek: App.DayOfWeek.create({asInteger:dayOfWeek}),
           classes: studio.classes.filterProperty("dayofweek", dayOfWeek)
         });
