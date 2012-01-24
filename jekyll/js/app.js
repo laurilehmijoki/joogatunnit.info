@@ -1,7 +1,9 @@
 
 App = Em.Application.create();
 
-App.School = Em.Object.extend({});
+App.School = Em.Object.extend({
+  hidden: false  
+});
 
 App.Studio = Em.Object.extend({
 
@@ -70,8 +72,13 @@ App.schoolsController = Em.ArrayController.create({
   }
 });
 
-App.SchoolLogoView = Em.View.extend({
-  templateName: "school-logo-view",
+App.SchoolHeaderView = Em.View.extend({
+  templateName: "school-header-view",
+  click: function(evt) {
+    if ($(evt.target).is("a.hide-school")) {
+      this.school.set('hidden', true);
+    }
+  }
 });
 
 App.StudioView = Em.View.extend({
