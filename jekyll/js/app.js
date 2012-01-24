@@ -33,6 +33,7 @@ App.YogaClass = Em.Object.extend({});
 
  
 App.schoolsController = Em.ArrayController.create({
+  selectedSchoolId: null, /* null == show all*/
   content: [],
 
   loadData: function() {
@@ -48,8 +49,28 @@ App.schoolsController = Em.ArrayController.create({
     });
   },
 
+  showSelectedSchools: function() {
+    var self = this;
+    if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
+      return;/*No school is specified; show all.*/
+    }
+    this.content.forEach(function(item){
+      item.set('hidden', item.get('id') != self.selectedSchoolId);
+    });
+  },
+
+  newHash: function(hash) {
+    this.setSelectedSchoolId(hash.substring(1));  
+  },
+  
+  setSelectedSchoolId: function(schoolId) {
+    this.selectedSchoolId = schoolId;
+    this.showSelectedSchools();
+  },
+
   // Returns an App.School
   createSchool: function(schoolJson) {
+    var self = this;
     studioModels = schoolJson.studios.map(function(studio) {
       classModels = studio.classes.map(function(yogaClass) {
         return App.YogaClass.create(yogaClass);
@@ -64,6 +85,8 @@ App.schoolsController = Em.ArrayController.create({
         });
       });
 
+      self.showSelectedSchools();
+
       return App.Studio.create(studio);
     });
 
@@ -72,13 +95,23 @@ App.schoolsController = Em.ArrayController.create({
   }
 });
 
+App.SchoolLinkView = Em.View.extend({
+  render: function(ctx) {
+    ctx.push("<a href='/#"+this.school.get('school').id+"'>"+this.school.get('school').name+"</a>");
+  }
+});
+
+App.SchoolListItemView = Em.View.extend({
+  templateName: "school-list-item-view",
+  tagName: "span",
+});
+
+App.SchoolListView = Em.View.extend({
+  templateName: "school-list-view"
+});
+
 App.SchoolHeaderView = Em.View.extend({
   templateName: "school-header-view",
-  click: function(evt) {
-    if ($(evt.target).is("a.hide-school")) {
-      this.school.set('hidden', true);
-    }
-  }
 });
 
 App.StudioView = Em.View.extend({
@@ -86,5 +119,7 @@ App.StudioView = Em.View.extend({
 
 });
 
-// Load the data. This also populates the views and produces the DOM.
-App.schoolsController.loadData();
+App.start = function() {
+  // Load the data. This also populates the views and produces the DOM.
+  App.schoolsController.loadData();
+}

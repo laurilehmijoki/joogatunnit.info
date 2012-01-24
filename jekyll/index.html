@@ -22,19 +22,33 @@
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-	<!--<script src="js/lib/tabs.js"></script>-->
-
   <script type="text/javascript" src="js/lib/ember-0.9.4.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  
+  <script type="text/javascript" src="js/lib/jquery.ba-hashchange.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      $(function(){
+        $(window).hashchange(function(){
+          App.schoolsController.newHash(location.hash);
+        });
+
+        $(window).hashchange();
+      });      
+      App.start();  
+    });
+  </script>
 
   <style type="text/css">
+    .container {margin-top:40px}
     a {text-decoration:none;}
     .block {display:block;}
     .yoga-class-teacher {font-style:italic;}
     img {max-width: 100%}
-    img.site-logo {max-height: 50px; display:inline;float:right;margin-top:-15px;margin-bottom:3px;}
+    img.site-logo {max-height: 50px; display:inline;float:right;margin:3px;}
     .school-logo {display: inline;max-height:50px;}
-    a.hide-school {opacity:0.5; float:right; margin-top:17px;}
+    .school-unselected a {opacity:0.5;filter: alpha(opacity=50);}
     hr.large {height:8px;background:#EBEBEB;border:none;margin-top:3px;}
   </style>
  
@@ -59,21 +73,37 @@
   
   <script type="text/x-handlebars" data-template-name="school-header-view">
     <div class="school-header">
-      <a class="hide-school" href="/#">[ piilota ]</a>
       <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
     </div>
   </script>  
+
+  <script type="text/x-handlebars" data-template-name="school-list-item-view">
+    {{#if school.hidden}}
+      <h5 class="school-unselected">{{view App.SchoolLinkView schoolBinding="this"}}</h5>
+    {{else}}
+      <h5>{{school.name}}</h5>
+    {{/if}}
+  </script>
+ 
+  <script type="text/x-handlebars" data-template-name="school-list-view">
+    <div class="one-third column header">
+      {{#each App.schoolsController.content}}
+        {{view App.SchoolListItemView schoolBinding="this"}}
+      {{/each}}      
+      <img class="site-logo" src="http://4.bp.blogspot.com/-9uHj9EZdVxE/Ten1wrHFvZI/AAAAAAAAAbI/B2wXlg28FjE/s1600/po_clear.png" alt="Kungfu">
+    </div>
+  </script>
+
 </head>
 <body>
 
 	<div class="container">
-		<div class="sixteen columns">
-			<h1 class="remove-bottom" style="margin-top: 40px">Joogatunnit</h1>
-      <img class="site-logo" src="http://4.bp.blogspot.com/-9uHj9EZdVxE/Ten1wrHFvZI/AAAAAAAAAbI/B2wXlg28FjE/s1600/po_clear.png" alt="Kungfu">
+		<div class="two-thirds column header">
+			<h1 class="remove-bottom">Joogatunnit</h1>
 			<h5>beta</h5>
 		</div>
-
     <script type="text/x-handlebars">
+      {{view App.SchoolListView}}
       {{#each App.schoolsController.content}}
         {{#unless hidden}}
           <hr class="large"/>
