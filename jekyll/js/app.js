@@ -74,10 +74,6 @@ App.SchoolLogoView = Em.View.extend({
   templateName: "school-logo-view",
 });
 
-App.StudioDayView = Em.View.extend({
-  templateName: "studio-day-view",
-});
-
 App.StudioView = Em.View.extend({
   templateName: "studio-view",
 
