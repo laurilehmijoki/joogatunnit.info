@@ -31,6 +31,7 @@
     $(document).ready(function(){
       $(function(){
         $(window).hashchange(function(){
+          /*Listen to changes in the URL location's hash (thanks to a jQuery plugin)*/
           App.schoolsController.newHash(location.hash);
         });
 
@@ -104,9 +105,11 @@
 		</div>
     <script type="text/x-handlebars">
       {{view App.SchoolListView}}
+    
+      <hr class="large"/>
+     
       {{#each App.schoolsController.content}}
         {{#unless hidden}}
-          <hr class="large"/>
           {{view App.SchoolHeaderView schoolBinding="this"}}
           {{#each studios}}
             {{view App.StudioView studioBinding="this"}}
@@ -116,7 +119,6 @@
       {{/each}}
     </script>
 	</div>
-
 </body>
 </html>
 

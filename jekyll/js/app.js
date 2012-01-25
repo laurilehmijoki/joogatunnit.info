@@ -31,7 +31,6 @@ App.DayOfWeek = Em.Object.extend({
 
 App.YogaClass = Em.Object.extend({});
 
- 
 App.schoolsController = Em.ArrayController.create({
   selectedSchoolId: null, /* null == show all*/
   content: [],
@@ -44,6 +43,7 @@ App.schoolsController = Em.ArrayController.create({
       success: function(data) {
         data.schools.forEach(function(school) {
           self.pushObject(self.createSchool(school));
+          self.showSelectedSchools();
         });
       }
     });
@@ -52,15 +52,18 @@ App.schoolsController = Em.ArrayController.create({
   showSelectedSchools: function() {
     var self = this;
     if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
-      return;/*No school is specified; show all.*/
+      /*No school is specified; hide all.*/
+      this.content.setEach('hidden', true);
+    } else {
+      /* Show the specified school(s)*/
+      this.content.forEach(function(item){
+        item.set('hidden', item.get('id') != self.selectedSchoolId);
+      });
     }
-    this.content.forEach(function(item){
-      item.set('hidden', item.get('id') != self.selectedSchoolId);
-    });
   },
 
   newHash: function(hash) {
-    this.setSelectedSchoolId(hash.substring(1));  
+    this.setSelectedSchoolId(hash.substring(1)/*Omit hash*/);  
   },
   
   setSelectedSchoolId: function(schoolId) {
@@ -85,7 +88,6 @@ App.schoolsController = Em.ArrayController.create({
         });
       });
 
-      self.showSelectedSchools();
 
       return App.Studio.create(studio);
     });
