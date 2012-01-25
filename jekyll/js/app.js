@@ -33,6 +33,8 @@ App.YogaClass = Em.Object.extend({});
 
 App.router = Em.Object.create({
   selectedSchoolId: null,
+  /*selectedCity: "Helsinki",*/
+  selectedStudioId: null,
   
   showSelectedSchools: function() {
     var self = this;
@@ -48,8 +50,34 @@ App.router = Em.Object.create({
     }
   },
 
+  showSelectedStudios: function() {
+    var self = this;
+    App.schoolsController.content.forEach(function(school) {
+      school.studios.forEach(function(studio) {
+        var hidden = (self.selectedStudioId == null || self.selectedSchooldId == "") ? false : studio.get('id') != self.selectedStudioId;
+        studio.set('hidden',  hidden);
+      });
+    });
+  },
+
   newHash: function(hash) {
-    this.setSelectedSchoolId(hash.substring(1)/*Omit char '#'*/);  
+    this.setSelectedSchoolId(this.parseSchoolId(hash));
+    this.setSelectedStudioId(this.parseStudioId(hash));
+  },
+
+  parseSchoolId: function(hash) {
+    return hash.substring(1/*Omit char '#'*/, this.hasStudio(hash) ? hash.indexOf('/') : hash.length);
+  },
+
+  hasStudio: function(hash) {return hash.indexOf('/') >= 0;},
+
+  parseStudioId: function(hash) {
+   return this.hasStudio(hash) ? hash.substring(hash.indexOf('/')+1, hash.length) : null; 
+  },
+
+  setSelectedStudioId: function(studioId) {
+    this.selectedStudioId = studioId;
+    this.showSelectedStudios();
   },
   
   setSelectedSchoolId: function(schoolId) {
@@ -60,7 +88,7 @@ App.router = Em.Object.create({
 });
 
 App.schoolsController = Em.ArrayController.create({
-  content: [],
+  content: [], /* App.School array*/
 
   loadData: function() {
     var self = this;
@@ -71,18 +99,21 @@ App.schoolsController = Em.ArrayController.create({
         data.schools.forEach(function(school) {
           self.pushObject(self.createSchool(school));
           App.router.showSelectedSchools();
+          App.router.showSelectedStudios();
         });
       }
     });
   },
 
-    // Returns an App.School
+  // Returns an App.School
   createSchool: function(schoolJson) {
     var self = this;
-    studioModels = schoolJson.studios.map(function(studio) {
+    studioModels = schoolJson.studios.map(function(studio, index) {
       classModels = studio.classes.map(function(yogaClass) {
         return App.YogaClass.create(yogaClass);
       });
+
+      studio.id = "sali-"+ (index + 1);
 
       studio.classes = classModels;
 
@@ -93,12 +124,21 @@ App.schoolsController = Em.ArrayController.create({
         });
       });
 
-
       return App.Studio.create(studio);
     });
 
     schoolJson.studios = studioModels;
-    return App.School.create(schoolJson);
+    school = App.School.create(schoolJson);
+
+    school.studios.forEach(function(studio) {studio.set('school', school);}); // Backref studio–>school
+    
+    return school;
+  }
+});
+
+App.StudioLinkView = Em.View.extend({
+  render: function(ctx) {
+    ctx.push("<a href='/#"+this.studio.get('school').id+"/"+this.studio.get('id')+"'>"+this.studio.get('name')+"</a>");
   }
 });
 

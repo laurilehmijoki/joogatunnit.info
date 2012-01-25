@@ -74,15 +74,18 @@
   
   <script type="text/x-handlebars" data-template-name="school-header-view">
     <div class="school-header">
-      <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
-      <blockquote>
-        <ul>
-          <li><a href="/#">eka</a></li>
-          <li>toka</li>
-          <li>kolmas</li>
-          <li>neljäs</li>
-        </ul>
-      </blockquote>
+      <div class="one-third column">
+        <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
+      </div>
+      <div class="two-thirds column">
+        <blockquote>
+          <ul>
+            {{#each school.studios}}
+              {{view App.StudioLinkView studioBinding="this" schoolBinding="school"}}
+            {{/each}}
+          </ul>
+        </blockquote>
+      </div>
     </div>
   </script>  
 
@@ -122,8 +125,10 @@
         {{#unless hidden}}
           {{view App.SchoolHeaderView schoolBinding="this"}}
           {{#each studios}}
-            {{view App.StudioView studioBinding="this"}}
-            <hr/>
+            {{#unless hidden}}
+              {{view App.StudioView studioBinding="this"}}
+              <hr/>
+            {{/unless}}
           {{/each}}
         {{/unless}}
       {{/each}}
