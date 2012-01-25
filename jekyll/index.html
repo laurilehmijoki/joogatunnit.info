@@ -75,7 +75,9 @@
   <script type="text/x-handlebars" data-template-name="school-header-view">
     <div class="school-header">
       <div class="one-third column">
-        <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
+        <a {{bindAttr href="school.homepage"}} target="_blank">
+          <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
+        </a>
       </div>
       <div class="two-thirds column">
         <blockquote>
