@@ -54,7 +54,9 @@
   </style>
  
   <script type="text/x-handlebars" data-template-name="studio-view">
-    <h5>{{studio.name}}</h5> 
+    <div class="sixteen columns">
+      <h5>{{studio.name}}</h5> 
+    </div>
     {{#each studio.dayDatas}}
     <div class="one-seventh column">
       <h6>{{dayofweek.inFinnish}}</h6>
@@ -79,6 +81,7 @@
           <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
         </a>
       </div>
+      {{#unless school.hasOneStudio}}
       <div class="two-thirds column">
         <blockquote>
           <ul>
@@ -88,6 +91,7 @@
           </ul>
         </blockquote>
       </div>
+      {{/unless}}
     </div>
   </script>  
 

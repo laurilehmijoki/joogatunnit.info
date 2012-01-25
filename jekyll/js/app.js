@@ -127,6 +127,7 @@ App.schoolsController = Em.ArrayController.create({
       return App.Studio.create(studio);
     });
 
+    schoolJson.hasOneStudio = studioModels.length == 1;
     schoolJson.studios = studioModels;
     school = App.School.create(schoolJson);
 
