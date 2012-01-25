@@ -31,8 +31,35 @@ App.DayOfWeek = Em.Object.extend({
 
 App.YogaClass = Em.Object.extend({});
 
+App.router = Em.Object.create({
+  selectedSchoolId: null,
+  
+  showSelectedSchools: function() {
+    var self = this;
+    var schools = App.schoolsController.content;
+    if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
+      /*No school is specified; hide all.*/
+      schools.setEach('hidden', true);
+    } else {
+      /* Show the specified school(s)*/
+      schools.forEach(function(item){
+        item.set('hidden', item.get('id') != self.selectedSchoolId);
+      });
+    }
+  },
+
+  newHash: function(hash) {
+    this.setSelectedSchoolId(hash.substring(1)/*Omit char '#'*/);  
+  },
+  
+  setSelectedSchoolId: function(schoolId) {
+    this.selectedSchoolId = schoolId;
+    this.showSelectedSchools();
+  },
+
+});
+
 App.schoolsController = Em.ArrayController.create({
-  selectedSchoolId: null, /* null == show all*/
   content: [],
 
   loadData: function() {
@@ -43,35 +70,13 @@ App.schoolsController = Em.ArrayController.create({
       success: function(data) {
         data.schools.forEach(function(school) {
           self.pushObject(self.createSchool(school));
-          self.showSelectedSchools();
+          App.router.showSelectedSchools();
         });
       }
     });
   },
 
-  showSelectedSchools: function() {
-    var self = this;
-    if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
-      /*No school is specified; hide all.*/
-      this.content.setEach('hidden', true);
-    } else {
-      /* Show the specified school(s)*/
-      this.content.forEach(function(item){
-        item.set('hidden', item.get('id') != self.selectedSchoolId);
-      });
-    }
-  },
-
-  newHash: function(hash) {
-    this.setSelectedSchoolId(hash.substring(1)/*Omit hash*/);  
-  },
-  
-  setSelectedSchoolId: function(schoolId) {
-    this.selectedSchoolId = schoolId;
-    this.showSelectedSchools();
-  },
-
-  // Returns an App.School
+    // Returns an App.School
   createSchool: function(schoolJson) {
     var self = this;
     studioModels = schoolJson.studios.map(function(studio) {
@@ -81,7 +86,7 @@ App.schoolsController = Em.ArrayController.create({
 
       studio.classes = classModels;
 
-      studio.dayDatas = [0,1,2,3,4,5,6].map(function(dayOfWeek) {
+      studio.dayDatas = [0,1,2,3,4,5,6].map(function(dayOfWeek) { // Group per weekday
         return App.DayData.create({
           dayofweek: App.DayOfWeek.create({asInteger:dayOfWeek}),
           classes: studio.classes.filterProperty("dayofweek", dayOfWeek)

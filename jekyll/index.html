@@ -32,7 +32,7 @@
       $(function(){
         $(window).hashchange(function(){
           /*Listen to changes in the URL location's hash (thanks to a jQuery plugin)*/
-          App.schoolsController.newHash(location.hash);
+          App.router.newHash(location.hash);
         });
 
         $(window).hashchange();
@@ -75,6 +75,14 @@
   <script type="text/x-handlebars" data-template-name="school-header-view">
     <div class="school-header">
       <img {{bindAttr src="school.logo_url"}} class="school-logo" alt="Logo"/>
+      <blockquote>
+        <ul>
+          <li><a href="/#">eka</a></li>
+          <li>toka</li>
+          <li>kolmas</li>
+          <li>neljäs</li>
+        </ul>
+      </blockquote>
     </div>
   </script>  
 
