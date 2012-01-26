@@ -12,7 +12,7 @@ end
 
 desc "Push to remotes 'github' and 'dropbox' (branch: master)"
 namespace :git do
-  task :to_remotes
+  task :to_remotes do
     sh 'git push dropbox master'
     sh 'git push github master'
   end
