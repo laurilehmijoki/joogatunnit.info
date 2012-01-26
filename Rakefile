@@ -5,15 +5,20 @@ task :json_all_schools do
 end
 
 desc "Re-deploy site (builds the JSONs and uploads to S3 and CloudFront)"
-task :redeploy => [:json_all_schools] do
+task :redeploy => [:json_all_schools, :acceptance] do
   puts __FILE__
   sh 'cd jekyll;jekyll-s3'
 end
 
-desc "Push to remotes 'github' and 'dropbox' (branch: master)"
 namespace :git do
-  task :to_remotes do
+  desc "Push to remotes 'github' and 'dropbox' (branch: master)"
+  task :to_remotes => [:acceptance] do
     sh 'git push dropbox master'
     sh 'git push github master'
   end
+end
+
+desc "Run the Cucumber acceptance tests"
+task :acceptance do
+  sh 'cucumber features/*'
 end
