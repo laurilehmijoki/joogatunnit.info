@@ -9,3 +9,11 @@ task :redeploy => [:json_all_schools] do
   puts __FILE__
   sh 'cd jekyll;jekyll-s3'
 end
+
+desc "Push to remotes 'github' and 'dropbox' (branch: master)"
+namespace :git do
+  task :to_remotes
+    sh 'git push dropbox master'
+    sh 'git push github master'
+  end
+end
