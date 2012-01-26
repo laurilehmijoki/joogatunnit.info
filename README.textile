@@ -8,6 +8,14 @@ This project parses yoga class schedules of Finnish yoga studios and makes them 
 
 The resulting application might even turn out to be helpful to Finnish yogis.
 
+h2. Running the application
+
+Before running the application, generate the JSON file by invoking @rake json_all_schools@. This
+parses the yoga class descriptions from the schools' web pages. After this start Jekyll with @jekyll
+--server@ in the 'jekyll' directory. This launches "Jekyll, the static site
+generator":https://github.com/mojombo/jekyll. Now the application is available at
+"http://localhost:4000":http://localhost:4000.
+
 h2. Running tests
 
 You can run the "Cucumber":http://cukes.info/ by invoking @cucumber features/*.feature@ in the
