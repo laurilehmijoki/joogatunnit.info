@@ -7,3 +7,8 @@ This project parses yoga class schedules of Finnish yoga studios and makes them 
 ** thanks to cowboy's "jquery-hashchange":https://github.com/cowboy/jquery-hashchange plugin
 
 The resulting application might even turn out to be helpful to Finnish yogis.
+
+h2. Running tests
+
+You can run the "Cucumber":http://cukes.info/ by invoking @cucumber features/*.feature@ in the
+project root.
