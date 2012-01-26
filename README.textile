@@ -1,6 +1,6 @@
 h1. Joogatunnit.info
 
-This project parses yoga class schedules of Finnish yoga studios and makes them available
+This project parses yoga class schedules of Finnish yoga studios and makes them available 
 "here":http://joogatunnit.net.s3-website-us-east-1.amazonaws.com. The purpose of this project is to try out
 * modern JavaScript MVC tools (Ember.js and Handlebars.js)
 * hash-based navigation on a single-page application
@@ -12,8 +12,7 @@ h2. Running the application
 
 Before running the application, generate the JSON file by invoking @rake json_all_schools@. This
 parses the yoga class descriptions from the schools' web pages. After this start Jekyll with @jekyll
---server@ in the 'jekyll' directory. This launches "Jekyll, the static site
-generator":https://github.com/mojombo/jekyll. Now the application is available at
+--server@ in the 'jekyll' directory. This launches "Jekyll, the static site generator":https://github.com/mojombo/jekyll. Now the application is available at
 "http://localhost:4000":http://localhost:4000.
 
 h2. Running tests
