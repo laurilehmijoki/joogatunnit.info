@@ -6,11 +6,11 @@ App.School = Em.Object.extend({
 });
 
 App.Studio = Em.Object.extend({
-
+  hidden: false
 });
 
 App.DayData = Em.Object.extend({
-
+  isInPast: false
 });
 
 App.DayOfWeek = Em.Object.extend({
@@ -108,6 +108,7 @@ App.schoolsController = Em.ArrayController.create({
   // Returns an App.School
   createSchool: function(schoolJson) {
     var self = this;
+    var today = new Date().getDay() != 0 ? new Date().getDay() - 1 : 6; // In JavaScript Date the week starts from Sunday
     studioModels = schoolJson.studios.map(function(studio, index) {
       classModels = studio.classes.map(function(yogaClass) {
         return App.YogaClass.create(yogaClass);
@@ -120,6 +121,7 @@ App.schoolsController = Em.ArrayController.create({
       studio.dayDatas = [0,1,2,3,4,5,6].map(function(dayOfWeek) { // Group per weekday
         return App.DayData.create({
           dayofweek: App.DayOfWeek.create({asInteger:dayOfWeek}),
+          isInPast: dayOfWeek < today,
           classes: studio.classes.filterProperty("dayofweek", dayOfWeek)
         });
       });
@@ -164,7 +166,10 @@ App.SchoolHeaderView = Em.View.extend({
 
 App.StudioView = Em.View.extend({
   templateName: "studio-view",
+});
 
+App.YogaClassView = Em.View.extend({
+  templateName: "yoga-class-view",
 });
 
 App.start = function() {

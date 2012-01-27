@@ -50,25 +50,34 @@
     img.site-logo {max-height: 50px; display:inline;float:right;margin:3px;}
     .school-logo {display: inline;max-height:50px;}
     .school-unselected a {opacity:0.5;filter: alpha(opacity=50);}
+    .in-past {opacity:0.5;filter: alpha(opacity=50);}
     hr.large {height:8px;background:#EBEBEB;border:none;margin-top:3px;}
   </style>
  
+  <script type="text/x-handlebars" data-template-name="yoga-class-view">
+    <p class="yoga-class">
+      <span class="yoga-class-name block">{{yogaClass.name}}</span>
+      <span class="yoga-class-teacher block">{{yogaClass.teacher}}</span>
+      {{#if yogaClass.starthour}}
+      <span class="yoga-class-start">{{yogaClass.starthour}}</span> – <span
+      class="yoga-class-end">{{yogaClass.endhour}}</span>
+      {{/if}}
+    </p>
+  </script>
+  
   <script type="text/x-handlebars" data-template-name="studio-view">
     <div class="sixteen columns">
       <h5>{{studio.name}}</h5> 
     </div>
     {{#each studio.dayDatas}}
-    <div class="one-seventh column">
+      {{#if isInPast}}
+    <div class="one-seventh column weekday in-past">
+      {{else}}
+    <div class="one-seventh column weekday">
+      {{/if}}
       <h6>{{dayofweek.inFinnish}}</h6>
       {{#each classes}}
-      <p class="yoga-class-info">
-        <span class="yoga-class-name block">{{name}}</span>
-        <span class="yoga-class-teacher block">{{teacher}}</span>
-        {{#if starthour}}
-        <span class="yoga-class-start">{{starthour}}</span> – <span
-        class="yoga-class-end">{{endhour}}</span>
-        {{/if}}
-      </p>
+        {{view App.YogaClassView yogaClassBinding="this"}}
       {{/each}}
     </div>
     {{/each}}
