@@ -1,6 +1,6 @@
 desc "Create the JSON presentation of all yoga schools"
 task :json_all_schools do
-  sh 'mkdir -p site/api'
+  sh 'mkdir -p jekyll/api'
   sh 'ruby lib/parse_all.rb > jekyll/api/all_schools'
 end
 
