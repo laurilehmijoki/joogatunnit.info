@@ -17,5 +17,5 @@ parses the yoga class descriptions from the schools' web pages. After this start
 
 h2. Running tests
 
-You can run the "Cucumber":http://cukes.info/ by invoking @cucumber features/*.feature@ in the
+You can run the "Cucumber":http://cukes.info/ acceptance tests by invoking @cucumber features/*.feature@ in the
 project root.
