@@ -1,6 +1,6 @@
 h1. Joogatunnit.info
 
-This project parses yoga class schedules of Finnish yoga studios and makes them available "here":http://joogatunnit.net.s3-website-us-east-1.amazonaws.com. The purpose of this project is to try out
+This project parses yoga class schedules of Finnish yoga studios and makes them available "here":http://beta.joogatunnit.info. The purpose of this project is to try out
 * modern JavaScript MVC tools (Ember.js and Handlebars.js)
 * mobile support with the same HTML and CSS
 * hash-based navigation on a single-page application
