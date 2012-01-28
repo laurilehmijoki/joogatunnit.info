@@ -29,6 +29,8 @@
   <script type="text/javascript">
 
     $(document).ready(function(){
+      var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Nokia)/);
+      if (isMobile) { $("body").addClass("mobile");}
       $(function(){
         $(window).hashchange(function(){
           /*Listen to changes in the URL location's hash (thanks to a jQuery plugin)*/
@@ -38,7 +40,9 @@
         $(window).hashchange();
       });      
       App.start();  
+
     });
+  
   </script>
 
   <style type="text/css">
@@ -51,6 +55,7 @@
     .school-logo {display: inline;max-height:50px;}
     .school-unselected a {opacity:0.5;filter: alpha(opacity=50);}
     .in-past {opacity:0.5;filter: alpha(opacity=50);}
+    .mobile .in-past {display:none;}
     hr.large {height:8px;background:#EBEBEB;border:none;margin-top:3px;}
   </style>
  

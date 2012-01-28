@@ -2,10 +2,20 @@ h1. Joogatunnit.info
 
 This project parses yoga class schedules of Finnish yoga studios and makes them available "here":http://joogatunnit.net.s3-website-us-east-1.amazonaws.com. The purpose of this project is to try out
 * modern JavaScript MVC tools (Ember.js and Handlebars.js)
+* mobile support with the same HTML and CSS
 * hash-based navigation on a single-page application
 ** thanks to cowboy's "jquery-hashchange":https://github.com/cowboy/jquery-hashchange plugin
 
 The resulting application might even turn out to be helpful to Finnish yogis.
+
+h2. Mobile support
+
+The application is designed to look good on both mobile and desktop browsers. Try it out yourself! Your mobile device lays out the content nicely on a single column thanks to
+"Skeleton":http://www.getskeleton.com/, a responsive CSS templating framework.
+
+In addition, the application hides the past yoga classes for mobile browsers, while it shows them as dimmed for desktop browsers. When you try this out, make sure its not Monday!
+
+What we got here is a rich web application that inherently supports different screen sizes and provides fine-tuned experience for mobile users.
 
 h2. Running the application
 
