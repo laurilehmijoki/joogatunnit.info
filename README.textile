@@ -10,8 +10,7 @@ The resulting application might even turn out to be helpful to Finnish yogis.
 
 h2. Mobile support
 
-The application is designed to look good on both mobile and desktop browsers. Try it out yourself! Your mobile device lays out the content nicely on a single column thanks to
-"Skeleton":http://www.getskeleton.com/, a responsive CSS templating framework.
+The application is designed to look good on both mobile and desktop browsers. Try it out yourself! Your mobile device lays out the content nicely on a single column thanks to "Skeleton":http://www.getskeleton.com/, a responsive CSS templating framework.
 
 In addition, the application hides the past yoga classes for mobile browsers, while it shows them as dimmed for desktop browsers. When you try this out, make sure its not Monday!
 
