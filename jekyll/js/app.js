@@ -31,62 +31,6 @@ App.DayOfWeek = Em.Object.extend({
 
 App.YogaClass = Em.Object.extend({});
 
-App.router = Em.Object.create({
-  selectedSchoolId: null,
-  /*selectedCity: "Helsinki",*/
-  selectedStudioId: null,
-  
-  showSelectedSchools: function() {
-    var self = this;
-    var schools = App.schoolsController.content;
-    if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
-      /*No school is specified; hide all.*/
-      schools.setEach('hidden', true);
-    } else {
-      /* Show the specified school(s)*/
-      schools.forEach(function(item){
-        item.set('hidden', item.get('id') != self.selectedSchoolId);
-      });
-    }
-  },
-
-  showSelectedStudios: function() {
-    var self = this;
-    App.schoolsController.content.forEach(function(school) {
-      school.studios.forEach(function(studio) {
-        var hidden = (self.selectedStudioId == null || self.selectedSchooldId == "") ? false : studio.get('id') != self.selectedStudioId;
-        studio.set('hidden',  hidden);
-      });
-    });
-  },
-
-  newHash: function(hash) {
-    this.setSelectedSchoolId(this.parseSchoolId(hash));
-    this.setSelectedStudioId(this.parseStudioId(hash));
-  },
-
-  parseSchoolId: function(hash) {
-    return hash.substring(1/*Omit char '#'*/, this.hasStudio(hash) ? hash.indexOf('/') : hash.length);
-  },
-
-  hasStudio: function(hash) {return hash.indexOf('/') >= 0;},
-
-  parseStudioId: function(hash) {
-   return this.hasStudio(hash) ? hash.substring(hash.indexOf('/')+1, hash.length) : null; 
-  },
-
-  setSelectedStudioId: function(studioId) {
-    this.selectedStudioId = studioId;
-    this.showSelectedStudios();
-  },
-  
-  setSelectedSchoolId: function(schoolId) {
-    this.selectedSchoolId = schoolId;
-    this.showSelectedSchools();
-  },
-
-});
-
 App.schoolsController = Em.ArrayController.create({
   content: [], /* App.School array*/
 
@@ -98,8 +42,6 @@ App.schoolsController = Em.ArrayController.create({
       success: function(data) {
         data.schools.forEach(function(school) {
           self.pushObject(self.createSchool(school));
-          App.router.showSelectedSchools();
-          App.router.showSelectedStudios();
         });
       }
     });
@@ -139,13 +81,80 @@ App.schoolsController = Em.ArrayController.create({
   }
 });
 
+App.router = Em.Object.create({
+  selectedSchoolId: null,
+  selectedStudioId: '',
+  schoolsBinding: 'App.schoolsController.content',
+  
+  showSelectedSchools: function() {
+    if (!this.schools) return;
+    var self = this;
+    if (self.selectedSchoolId == null || self.selectedSchoolId == "") {
+      /*No school is specified; hide all.*/
+      this.schools.setEach('hidden', true);
+    } else {
+      /* Show the specified school(s)*/
+      this.schools.forEach(function(item){
+        item.set('hidden', item.get('id') != self.selectedSchoolId);
+      });
+    }
+  }.observes('schools.@each'),
+
+  showSelectedStudios: function() {
+    if (!this.schools) return;
+    var self = this;
+    this.schools.forEach(function(school) {
+      school.studios.forEach(function(studio) {
+        var hidden = (self.selectedStudioId == null || self.selectedSchooldId == "") ? false : studio.get('id') != self.selectedStudioId;
+        studio.set('hidden',  hidden);
+      });
+    });
+  }.observes('schools.@each'),
+
+  newHash: function(hash) {
+    this.setSelectedSchoolId(this.parseSchoolId(hash));
+    this.setSelectedStudioId(this.parseStudioId(hash));
+  },
+
+  parseSchoolId: function(hash) {
+    return hash.substring(1/*Omit char '#'*/, this.hasStudio(hash) ? hash.indexOf('/') : hash.length);
+  },
+
+  hasStudio: function(hash) {return hash.indexOf('/') >= 0;},
+
+  parseStudioId: function(hash) {
+   return this.hasStudio(hash) ? hash.substring(hash.indexOf('/')+1, hash.length) : null; 
+  },
+
+  setSelectedStudioId: function(studioId) {
+    this.selectedStudioId = studioId;
+    this.showSelectedStudios();
+  },
+  
+  setSelectedSchoolId: function(schoolId) {
+    this.selectedSchoolId = schoolId;
+    this.showSelectedSchools();
+  },
+
+   selectedStudio:function() {
+     var selectedStudios = [];
+     this.schools.forEach(function(school) {
+       selectedStudios = school.get('studios').filterProperty('hidden', false)
+     });
+     return selectedStudios.length == 1 ? selectedStudios[0] : '';
+   }.property('schools.@each.studios.@each')
+});
+
+
 App.StudioLinkView = Em.View.extend({
+  tagName: 'span',
   render: function(ctx) {
     ctx.push("<a href='/#"+this.studio.get('school').id+"/"+this.studio.get('id')+"'>"+this.studio.get('name')+"</a>");
   }
 });
 
 App.SchoolLinkView = Em.View.extend({
+  tagName: 'span',
   render: function(ctx) {
     ctx.push("<a href='/#"+this.school.get('school').id+"'>"+this.school.get('school').name+"</a>");
   }
