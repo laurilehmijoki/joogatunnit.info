@@ -89,10 +89,6 @@
   </script>
   
   <script type="text/x-handlebars" data-template-name="school-header-view">
-    <div class="breadcrumbs sixteen columns">
-      <a href="/">Joogatunnit</a> –> {{view App.SchoolLinkView schoolBinding="this"}} 
-      {{#if App.router.selectedStudio}} –> {{view App.StudioLinkView studioBinding="App.router.selectedStudio"}}{{/if}}
-    </div>  
     <div class="school-header">
       <div class="one-third column">
         <a {{bindAttr href="school.homepage"}} target="_blank">
