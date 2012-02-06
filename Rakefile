@@ -7,7 +7,7 @@ end
 desc "Re-deploy site (builds the JSONs and uploads to S3 and CloudFront)"
 task :redeploy => [:json_all_schools, :acceptance] do
   puts __FILE__
-  sh 'cd jekyll;jekyll-s3'
+  sh 'cd jekyll;jekyll --no-auto;jekyll-s3'
 end
 
 namespace :git do
