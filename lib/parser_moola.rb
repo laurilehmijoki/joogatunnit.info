@@ -8,7 +8,7 @@ module Parser
   # Parser for Moola (http://moola.fi)
   class Moola
     attr_reader :doc
-		@@url = "http://moola.fi/Site/Aikataulut.html"
+		@@url = "http://moola.fi/Aikataulut.html"
 		
 		def parse
 			@doc = Nokogiri::HTML(open(@@url)) 
